@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "totaly not osu", "totaly not osu.csproj", "{EFABB8F6-D136-42D6-90FB-19D0A2B9275D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFABB8F6-D136-42D6-90FB-19D0A2B9275D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFABB8F6-D136-42D6-90FB-19D0A2B9275D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFABB8F6-D136-42D6-90FB-19D0A2B9275D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFABB8F6-D136-42D6-90FB-19D0A2B9275D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {570BBA83-9DF6-4B9E-A08C-379FC2B9E862}
+	EndGlobalSection
+EndGlobal
