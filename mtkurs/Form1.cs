@@ -3,17 +3,16 @@ namespace mtkurs
    
     public partial class Form1 : Form
     {
+        public static int counter = 0;
+        public user[] user_mas = new user[10];
         public Form1()
         {
             InitializeComponent();
             load();
-        }
-
-        public int counter = 0;
-        public user[] user_mas;
+        }    
         private void load() {
             string log, pas, bf;
-            int adm;
+            int adm,ct = 0;
             StreamReader reader = new StreamReader("userlist.txt");
             while ((log = reader.ReadLine()) != null)
             {
@@ -23,6 +22,7 @@ namespace mtkurs
                 user_mas[counter] = new user(log, pas, adm);
                 counter++;
             }
+           
             reader.Close();
         }
         private int search(string lg,string pw)
@@ -60,7 +60,6 @@ namespace mtkurs
                 writer.Close();
                 Form2 f2 = new Form2();
                 f2.Show();
-                Close();
             }
         }
 
@@ -68,7 +67,6 @@ namespace mtkurs
         {
             Form2 f2 = new Form2();
             f2.Show();
-            Close();
         }
     }
     public class user
