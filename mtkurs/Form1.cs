@@ -34,6 +34,29 @@ namespace mtkurs
             }
             return -1;
         }
+        private void reg_new()
+        {
+            string lg, pw;
+            lg = textBox1.Text;
+            pw = textBox2.Text;
+            if (search(lg, pw) == 1 || search(lg, pw) == 0)
+                statLb.Text = "Такой пользователь уже существует";
+            else
+            {
+                user_mas[counter] = new user(lg, pw, 0);
+                counter++;
+
+                StreamWriter writer = new StreamWriter("userlist.txt", false);//false для перезаписи true для дозаписи
+                for (int i = 0; i < counter; i++)
+                {
+                    writer.WriteLine(user_mas[i].login);
+                    writer.WriteLine(user_mas[i].password);
+                    writer.WriteLine(user_mas[i].admin);
+                }
+                writer.Close();
+                statLb.Text = " ";
+            }
+        }
         private void entBt_Click(object sender, EventArgs e)
         {
             string lg, pw;
@@ -66,7 +89,15 @@ namespace mtkurs
         private void gueBt_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2();
+            StreamWriter writer = new StreamWriter("mode.txt");
+            writer.WriteLine("2");
+            writer.Close();
             f2.Show();
+        }
+
+        private void regBt_Click(object sender, EventArgs e)
+        {
+            reg_new();
         }
     }
     public class user

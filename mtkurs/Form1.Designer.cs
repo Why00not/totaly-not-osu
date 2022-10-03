@@ -56,6 +56,7 @@
             this.regBt.TabIndex = 1;
             this.regBt.Text = "Зарегестрироваться";
             this.regBt.UseVisualStyleBackColor = true;
+            this.regBt.Click += new System.EventHandler(this.regBt_Click);
             // 
             // gueBt
             // 
